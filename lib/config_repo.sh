@@ -59,6 +59,10 @@ install_local http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
 }
 
+rpmsphere.repo() {
+install_local http://download.opensuse.org/repositories/home:/zhonghuaren/Fedora_19/noarch/rpmsphere-release-18.17-2.1.noarch.rpm
+}
+
 google.repo() {
 rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
 cat <<EOF | tee /etc/yum.repos.d/google.repo > /dev/null 2>&1
